@@ -70,8 +70,19 @@ export default function Contact() {
     setIsSubmitting(true)
     
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message')
+      }
       
       toast.success("Thank you! Your message has been sent successfully.")
       setIsSubmitted(true)
@@ -83,7 +94,8 @@ export default function Contact() {
         service: '',
         message: ''
       })
-    } catch {
+    } catch (error) {
+      console.error('Form submission error:', error)
       toast.error("Sorry, there was an error sending your message. Please try again.")
     } finally {
       setIsSubmitting(false)
