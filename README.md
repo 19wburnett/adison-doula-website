@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adison Doula Website
+
+A beautiful, modern website for Adison, a professional doula, built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Modern Design**: Clean, minimal design with lots of whitespace and beautiful typography
+- **Responsive**: Mobile-first design that works perfectly on all devices
+- **Dark Mode**: Optional dark mode toggle with system preference detection
+- **Animations**: Smooth Framer Motion animations and transitions
+- **SEO Optimized**: Proper metadata and image optimization
+- **Form Validation**: Contact form with client-side validation and success states
+- **Image Gallery**: Portfolio page with lightbox functionality
+- **Testimonials**: Carousel layout for client reviews
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel-ready
+
+## Pages
+
+1. **Home** - Hero section with call-to-action and feature highlights
+2. **About** - Adison's story, philosophy, and certifications
+3. **Work** - Portfolio gallery with lightbox view
+4. **Reviews** - Client testimonials with carousel
+5. **Contact** - Contact form with validation and contact information
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The website is ready for deployment on Vercel:
 
-## Learn More
+1. Push your code to a GitHub repository
+2. Connect the repository to Vercel
+3. Deploy with zero configuration
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Images
+Replace placeholder images in the following locations:
+- `/public/hero-bg.jpg` - Hero background image
+- `/public/adison-about.jpg` - About page image
+- `/public/work/` - Portfolio images
+- `/public/testimonials/` - Client photos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Content
+Update the content in each page component:
+- `src/app/page.tsx` - Home page content
+- `src/app/about/page.tsx` - About page content
+- `src/app/work/page.tsx` - Portfolio content
+- `src/app/reviews/page.tsx` - Testimonials
+- `src/app/contact/page.tsx` - Contact information
 
-## Deploy on Vercel
+### Styling
+The website uses Tailwind CSS with a custom color scheme. Main colors:
+- Primary: Rose (rose-500, rose-600)
+- Background: White/Gray-50
+- Text: Gray-900/Gray-600
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features Implemented
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✅ Next.js 14 with App Router  
+✅ TypeScript  
+✅ Tailwind CSS + shadcn/ui  
+✅ Framer Motion animations  
+✅ Responsive design  
+✅ Dark mode toggle  
+✅ SEO optimization  
+✅ Image optimization  
+✅ Form validation  
+✅ Smooth scrolling  
+✅ Mobile-first approach  
+
+## License
+
+This project is private and proprietary to Adison Doula Services.
