@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -11,7 +11,7 @@ const testimonials = [
     name: "Sarah M.",
     role: "Mother of Two",
     rating: 5,
-    text: "Adison's support made all the difference during my birth experience. Her calm presence and expertise helped me feel confident and empowered throughout the entire process. I couldn't have asked for a better doula.",
+    text: "Adison&apos;s support made all the difference during my birth experience. Her calm presence and expertise helped me feel confident and empowered throughout the entire process. I couldn&apos;t have asked for a better doula.",
     image: "/testimonials/sarah.jpg"
   },
   {
@@ -100,7 +100,7 @@ export default function Reviews() {
               Client Reviews
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Hear from the families I've had the privilege to support. Their stories 
+              Hear from the families I&apos;ve had the privilege to support. Their stories 
               reflect the heart of my work and the impact of compassionate doula care.
             </p>
           </motion.div>
@@ -128,7 +128,7 @@ export default function Reviews() {
               </div>
 
               <blockquote className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                "{currentTestimonial.text}"
+                &ldquo;{currentTestimonial.text}&rdquo;
               </blockquote>
 
               <div className="flex items-center justify-center space-x-4">
@@ -212,7 +212,7 @@ export default function Reviews() {
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Every family's experience is unique. Here are more stories from 
-              families I've had the honor to support.
+              families I&apos;ve had the honor to support.
             </p>
           </motion.div>
 
@@ -233,7 +233,7 @@ export default function Reviews() {
                 </div>
                 
                 <blockquote className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </blockquote>
                 
                 <div className="flex items-center space-x-3">

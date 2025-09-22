@@ -61,7 +61,7 @@ export default function About() {
                 My journey as a doula began with a deep belief that every family 
                 deserves compassionate, non-judgmental support during pregnancy, 
                 birth, and the early postpartum period. Having witnessed the 
-                transformative power of proper support, I'm committed to ensuring 
+                transformative power of proper support, I&apos;m committed to ensuring 
                 every family feels empowered and confident throughout their journey.
               </p>
 
@@ -197,7 +197,7 @@ export default function About() {
               },
               {
                 title: "Continuous Support",
-                description: "From pregnancy through the early postpartum period, I'm here to provide consistent, reliable support."
+                description: "From pregnancy through the early postpartum period, I&apos;m here to provide consistent, reliable support."
               }
             ].map((value, index) => (
               <motion.div
@@ -234,7 +234,7 @@ export default function About() {
               Beyond Professional Care
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-              When I'm not supporting families, you'll find me spending time with my 
+              When I&apos;m not supporting families, you&apos;ll find me spending time with my 
               own family, reading the latest research on birth and parenting, or 
               enjoying a quiet moment with a cup of tea. I believe that self-care 
               and personal fulfillment make me a better doula and a more present 

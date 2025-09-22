@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
-import { X, Heart, Users, Baby, Calendar } from "lucide-react"
+import { Heart, Users, Baby, Calendar } from "lucide-react"
 
 const portfolioImages = [
   {
@@ -94,7 +94,7 @@ export default function Work() {
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               A glimpse into the compassionate care and support I provide to families 
               during their most precious moments. Every family's journey is unique, 
-              and I'm honored to be part of their story.
+              and I&apos;m honored to be part of their story.
             </p>
           </motion.div>
         </div>
@@ -206,9 +206,9 @@ export default function Work() {
             className="text-center max-w-4xl mx-auto"
           >
               <blockquote className="text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-8 leading-relaxed">
-                "Adison's presence during my birth was invaluable. Her calm, confident 
+                &ldquo;Adison&apos;s presence during my birth was invaluable. Her calm, confident 
                 support helped me feel empowered and safe throughout the entire process. 
-                I couldn't have done it without her."
+                I couldn&apos;t have done it without her.&rdquo;
               </blockquote>
               <cite className="text-lg text-gray-600 dark:text-gray-300 font-medium">
                 — Jessica L., First-time Mother

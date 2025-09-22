@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   description: "Supporting families through their most precious moments with care, compassion, and expertise. Professional doula services for your journey to parenthood.",
   keywords: ["doula", "birth support", "pregnancy", "postpartum", "family support"],
   authors: [{ name: "Adison" }],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Adison - Professional Doula Services",
     description: "Supporting families through their most precious moments with care, compassion, and expertise.",
