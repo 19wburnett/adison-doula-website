@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     title: "Adison - Professional Doula Services",
     description: "Supporting families through their most precious moments with care, compassion, and expertise.",
     type: "website",
+    images: [
+      {
+        url: "/work/pic1.jpg", // This will be your meta photo
+        width: 1200,
+        height: 630,
+        alt: "Adison - Professional Doula Services",
+      },
+    ],
   },
 };
 
