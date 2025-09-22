@@ -93,7 +93,7 @@ export default function Work() {
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               A glimpse into the compassionate care and support I provide to families 
-              during their most precious moments. Every family's journey is unique, 
+              during their most precious moments. Every family&apos;s journey is unique, 
               and I&apos;m honored to be part of their story.
             </p>
           </motion.div>

@@ -83,7 +83,7 @@ export default function Contact() {
         service: '',
         message: ''
       })
-    } catch (error) {
+    } catch {
       toast.error("Sorry, there was an error sending your message. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -103,10 +103,10 @@ export default function Contact() {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Thank You!
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Your message has been sent successfully. I'll get back to you within 24 hours 
-            to discuss how I can support you and your family.
-          </p>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+              Your message has been sent successfully. I&apos;ll get back to you within 24 hours 
+              to discuss how I can support you and your family.
+            </p>
           <Button 
             onClick={() => setIsSubmitted(false)}
             className="bg-rose-500 hover:bg-rose-600"
@@ -130,10 +130,10 @@ export default function Contact() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Let's Connect
+              Let&apos;s Connect
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Ready to discuss how I can support you and your family? I'd love to 
+              Ready to discuss how I can support you and your family? I&apos;d love to 
               hear about your journey and answer any questions you may have.
             </p>
           </motion.div>
@@ -157,7 +157,7 @@ export default function Contact() {
                     Send a Message
                   </CardTitle>
                   <CardDescription className="dark:text-gray-300">
-                    Fill out the form below and I'll get back to you within 24 hours.
+                    Fill out the form below and I&apos;ll get back to you within 24 hours.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -286,7 +286,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  I'm here to answer your questions and discuss how I can support 
+                  I&apos;m here to answer your questions and discuss how I can support 
                   you and your family during this special time.
                 </p>
               </div>

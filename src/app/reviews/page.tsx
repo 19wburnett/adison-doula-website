@@ -211,7 +211,7 @@ export default function Reviews() {
               More Client Stories
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Every family's experience is unique. Here are more stories from 
+              Every family&apos;s experience is unique. Here are more stories from 
               families I&apos;ve had the honor to support.
             </p>
           </motion.div>
@@ -270,7 +270,7 @@ export default function Reviews() {
               Ready to Create Your Own Story?
             </h2>
             <p className="text-xl text-rose-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how I can support you and your family during this 
+              Let&apos;s discuss how I can support you and your family during this 
               special time. Every family deserves compassionate, professional care.
             </p>
             <Button asChild size="lg" className="bg-white text-rose-500 hover:bg-gray-100 text-lg px-8 py-6">

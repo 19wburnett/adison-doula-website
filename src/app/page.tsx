@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image"
 import PlaceholderImage from "@/components/placeholder-image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -28,7 +27,6 @@ export default function Home() {
             <source src="/videos/Baby Test Video.mp4" type="video/mp4" />
             {/* Fallback image if video doesn't load */}
             <PlaceholderImage
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1920&h=1080&fit=crop&crop=face&auto=format&q=80"
               alt="Adison Doula"
               width={1920}
               height={1080}
@@ -169,8 +167,8 @@ export default function Home() {
                 ))}
               </div>
               <blockquote className="text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-8 leading-relaxed">
-                "Adison's support made all the difference during my birth experience. 
-                Her calm presence and expertise helped me feel confident and empowered."
+                &ldquo;Adison&apos;s support made all the difference during my birth experience. 
+                Her calm presence and expertise helped me feel confident and empowered.&rdquo;
               </blockquote>
               <cite className="text-lg text-gray-600 dark:text-gray-300">
                 — Sarah M., Mother of Two
@@ -198,7 +196,7 @@ export default function Home() {
               Ready to Begin Your Journey?
             </h2>
             <p className="text-xl text-rose-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how I can support you and your family during this 
+              Let&apos;s discuss how I can support you and your family during this 
               special time. Every family deserves compassionate, professional care.
             </p>
             <Button asChild size="lg" className="bg-white text-rose-500 hover:bg-gray-100 text-lg px-8 py-6">

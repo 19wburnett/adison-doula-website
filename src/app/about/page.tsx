@@ -177,7 +177,7 @@ export default function About() {
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Every family is unique, and my approach reflects that understanding. 
-              Here's how I support families through their journey.
+              Here&apos;s how I support families through their journey.
             </p>
           </motion.div>
 
@@ -242,9 +242,9 @@ export default function About() {
             </p>
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md">
               <blockquote className="text-lg italic text-gray-700 dark:text-gray-300 mb-4">
-                "Every birth story is unique, and every family deserves to feel 
-                supported, heard, and empowered throughout their journey. It's an 
-                honor to be part of such meaningful moments."
+                &ldquo;Every birth story is unique, and every family deserves to feel 
+                supported, heard, and empowered throughout their journey. It&apos;s an 
+                honor to be part of such meaningful moments.&rdquo;
               </blockquote>
               <cite className="text-rose-600 dark:text-rose-400 font-semibold">— Adison</cite>
             </div>
