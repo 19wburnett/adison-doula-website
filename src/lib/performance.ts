@@ -1,27 +1,14 @@
-import React from 'react'
-
 // Performance optimization utilities
 
 /**
- * Lazy load a component with suspense fallback
+ * Debounce function for performance optimization
+ * @param func - Function to debounce
+ * @param wait - Wait time in milliseconds
+ * @returns Debounced function
  */
-export function lazyLoad<T extends React.ComponentType<Record<string, unknown>>>(
-  factory: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
-) {
-  const LazyComponent = React.lazy(factory)
-  return (props: React.ComponentProps<T>) => (
-    <React.Suspense fallback={fallback || null}>
-      <LazyComponent {...props} />
-    </React.Suspense>
-  )
-}
 
 type AnyFunction = (...args: unknown[]) => unknown
 
-/**
- * Debounce function for performance optimization
- */
 export function debounce<T extends AnyFunction>(
   func: T,
   wait: number
@@ -82,4 +69,3 @@ export function preloadImage(src: string): Promise<void> {
     img.src = src
   })
 }
-
