@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -73,15 +73,15 @@ export default function Reviews() {
   }
 
   // Auto-play functionality
-  useState(() => {
+  useEffect(() => {
     if (!isAutoPlaying) return
 
     const interval = setInterval(() => {
-      nextTestimonial()
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
     }, 5000)
 
     return () => clearInterval(interval)
-  })
+  }, [isAutoPlaying])
 
   const currentTestimonial = testimonials[currentIndex]
 

@@ -23,28 +23,28 @@ const portfolioImages = [
   },
   {
     id: 3,
-    src: "/work/prenatal-visit-1.jpg",
+    src: "/work/pic1.jpg",
     alt: "Prenatal visit",
     title: "Prenatal Visits",
     description: "Preparing families for their upcoming birth experience"
   },
   {
     id: 4,
-    src: "/work/family-support-1.jpg",
+    src: "/work/pic2.jpg",
     alt: "Family support",
     title: "Family Support",
     description: "Supporting the entire family unit through the journey"
   },
   {
     id: 5,
-    src: "/work/breastfeeding-support-1.jpg",
+    src: "/work/pic1.jpg",
     alt: "Breastfeeding support",
     title: "Lactation Support",
     description: "Helping families with feeding and newborn care"
   },
   {
     id: 6,
-    src: "/work/education-session-1.jpg",
+    src: "/work/pic2.jpg",
     alt: "Education session",
     title: "Education Sessions",
     description: "Providing evidence-based information and resources"
@@ -182,6 +182,9 @@ export default function Work() {
                       alt={image.alt}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                      loading="lazy"
+                      quality={80}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
@@ -249,6 +252,8 @@ export default function Work() {
                   width={800}
                   height={600}
                   className="w-full h-auto max-h-[80vh] object-contain"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  quality={90}
                 />
                 <div className="p-6 bg-card">
                   <h3 className="text-2xl font-semibold text-card-foreground mb-2">

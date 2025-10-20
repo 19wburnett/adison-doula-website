@@ -47,6 +47,9 @@ export default function About() {
                 width={600}
                 height={800}
                 className="rounded-lg shadow-xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                priority
+                quality={85}
               />
             </motion.div>
 
@@ -119,6 +122,9 @@ export default function About() {
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg object-cover w-full"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                loading="lazy"
+                quality={80}
               />
             </motion.div>
 
@@ -168,6 +174,9 @@ export default function About() {
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg object-cover w-full"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                loading="lazy"
+                quality={80}
               />
             </motion.div>
           </div>
@@ -186,6 +195,9 @@ export default function About() {
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg object-cover w-full"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                loading="lazy"
+                quality={80}
               />
             </motion.div>
 
@@ -230,11 +242,14 @@ export default function About() {
               className="lg:order-2 order-1"
             >
               <Image
-                src={AdisonWithFullFamily}
+                src={AdisonWithBaby}
                 alt="Understanding Challenges"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg object-cover w-full"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                loading="lazy"
+                quality={80}
               />
             </motion.div>
           </div>
@@ -300,7 +315,7 @@ export default function About() {
       </section>
 
       {/* Personal Touch */}
-      <section className="py-20 bg-accent">
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -309,7 +324,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Beyond Professional Care
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">

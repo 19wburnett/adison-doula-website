@@ -340,10 +340,10 @@ export default function Contact() {
 
               <div className="bg-accent p-6 rounded-lg">
                 <div className="flex items-center space-x-2 mb-3">
-                  <Heart className="h-5 w-5 text-primary text-white" />
-                  <h3 className="font-semibold text-foreground text-white">Free Consultation</h3>
+                  <Heart className="h-5 w-5 text-primary" />
+                  <h3 className="font-semibold text-accent-foreground">Free Consultation</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-accent-foreground/80 text-sm">
                   I offer a complimentary 30-minute consultation to discuss your needs 
                   and answer any questions you may have about doula services.
                 </p>

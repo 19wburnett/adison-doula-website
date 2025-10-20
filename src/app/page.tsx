@@ -6,7 +6,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Heart, ArrowRight, Star, Users, Award, Baby, Clock, Home as HomeIcon, Sparkles, TrendingDown, TrendingUp, Timer, Shield, Smile, HeartHandshake } from "lucide-react"
+import { Heart, ArrowRight, Star, Users, Award, Baby, Home as HomeIcon, Sparkles, TrendingDown, TrendingUp, Timer, Shield, Smile, HeartHandshake } from "lucide-react"
 import AdisonProfile from "../../public/photos/adison-profile-picture.jpg"
 import DoulaSupportingFamilies from "../../public/work/pic2.jpg"
 
@@ -112,6 +112,8 @@ export default function Home() {
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  quality={85}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               </div>
@@ -264,6 +266,9 @@ export default function Home() {
                   alt="Doula providing support"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  loading="lazy"
+                  quality={80}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
@@ -516,6 +521,9 @@ export default function Home() {
                       alt={service.title}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                      loading="lazy"
+                      quality={80}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-4 left-4 text-white">
@@ -584,6 +592,9 @@ export default function Home() {
               alt="Vela Doula supporting families"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              loading="lazy"
+              quality={80}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-8 left-8 text-white max-w-2xl">
@@ -623,6 +634,9 @@ export default function Home() {
                   alt={item.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  loading="lazy"
+                  quality={80}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                 <div className="absolute bottom-6 left-6 text-white">

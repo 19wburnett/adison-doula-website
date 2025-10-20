@@ -144,7 +144,7 @@ export default function Pricing() {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Flexible options designed to meet your unique needs and budget. 
-              All packages include my commitment to your family's wellbeing.
+              All packages include my commitment to your family&apos;s wellbeing.
             </p>
           </motion.div>
 
@@ -332,7 +332,7 @@ export default function Pricing() {
                       ))}
                     </div>
                     <blockquote className="text-muted-foreground italic mb-2">
-                      "{testimonial.text}"
+                      &ldquo;{testimonial.text}&rdquo;
                     </blockquote>
                     <cite className="text-sm text-primary font-semibold">
                       — {testimonial.author}
