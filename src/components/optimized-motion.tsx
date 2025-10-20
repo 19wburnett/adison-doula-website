@@ -2,7 +2,7 @@
 
 import { motion, type MotionProps } from 'framer-motion'
 import { useReducedMotion } from '@/lib/use-reduced-motion'
-import { type ReactNode } from 'react'
+import { type ReactNode, type ElementType } from 'react'
 
 interface OptimizedMotionProps extends MotionProps {
   children: ReactNode
@@ -21,7 +21,7 @@ export function OptimizedMotion({
 }: OptimizedMotionProps) {
   const prefersReducedMotion = useReducedMotion()
   
-  const Component = motion[as] as any
+  const Component = motion[as] as ElementType
 
   if (prefersReducedMotion) {
     return (

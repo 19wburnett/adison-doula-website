@@ -1,9 +1,11 @@
+import React from 'react'
+
 // Performance optimization utilities
 
 /**
  * Lazy load a component with suspense fallback
  */
-export function lazyLoad<T extends React.ComponentType<any>>(
+export function lazyLoad<T extends React.ComponentType<Record<string, unknown>>>(
   factory: () => Promise<{ default: T }>,
   fallback?: React.ReactNode
 ) {
@@ -15,10 +17,12 @@ export function lazyLoad<T extends React.ComponentType<any>>(
   )
 }
 
+type AnyFunction = (...args: unknown[]) => unknown
+
 /**
  * Debounce function for performance optimization
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends AnyFunction>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -32,7 +36,7 @@ export function debounce<T extends (...args: any[]) => any>(
 /**
  * Throttle function for performance optimization
  */
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends AnyFunction>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
@@ -46,6 +50,12 @@ export function throttle<T extends (...args: any[]) => any>(
   }
 }
 
+interface NetworkInformation {
+  saveData?: boolean
+  effectiveType?: string
+  downlink?: number
+}
+
 /**
  * Check if device has slow network connection
  */
@@ -53,11 +63,11 @@ export function isSlowConnection(): boolean {
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {
     return false
   }
-  const connection = (navigator as any).connection
+  const connection = (navigator as { connection?: NetworkInformation }).connection
   return (
     connection?.saveData ||
-    /2g/.test(connection?.effectiveType) ||
-    connection?.downlink < 1
+    /2g/.test(connection?.effectiveType || '') ||
+    (connection?.downlink || 10) < 1
   )
 }
 
@@ -72,6 +82,4 @@ export function preloadImage(src: string): Promise<void> {
     img.src = src
   })
 }
-
-import React from 'react'
 

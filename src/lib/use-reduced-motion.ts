@@ -19,7 +19,7 @@ export function useReducedMotion() {
 }
 
 // Helper function to get animation config based on reduced motion preference
-export function getAnimationConfig(config: any, reducedMotion: boolean) {
+export function getAnimationConfig(config: Record<string, unknown>, reducedMotion: boolean) {
   if (reducedMotion) {
     return {
       ...config,
