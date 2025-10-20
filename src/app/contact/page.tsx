@@ -104,7 +104,7 @@ export default function Contact() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen pt-16 flex items-center justify-center bg-gradient-to-br from-rose-50 to-pink-50 dark:from-gray-900 dark:to-gray-800">
+      <div className="min-h-screen pt-16 flex items-center justify-center bg-gradient-to-br from-background to-muted">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -112,16 +112,15 @@ export default function Contact() {
           className="text-center max-w-2xl mx-auto px-4"
         >
           <CheckCircle className="h-24 w-24 text-green-500 mx-auto mb-6" />
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl font-bold text-foreground mb-4">
             Thank You!
           </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Your message has been sent successfully. I&apos;ll get back to you within 24 hours 
               to discuss how I can support you and your family.
             </p>
           <Button 
             onClick={() => setIsSubmitted(false)}
-            className="bg-rose-500 hover:bg-rose-600"
           >
             Send Another Message
           </Button>
@@ -133,7 +132,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-20 bg-gradient-to-br from-background to-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -141,10 +140,10 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Let&apos;s Connect
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Ready to discuss how I can support you and your family? I&apos;d love to 
               hear about your journey and answer any questions you may have.
             </p>
@@ -159,16 +158,15 @@ export default function Contact() {
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
             >
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <CardTitle className="text-2xl font-bold text-card-foreground">
                     Send a Message
                   </CardTitle>
-                  <CardDescription className="dark:text-gray-300">
+                  <CardDescription className="text-muted-foreground">
                     Fill out the form below and I&apos;ll get back to you within 24 hours.
                   </CardDescription>
                 </CardHeader>
@@ -176,7 +174,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">
                           Full Name *
                         </label>
                         <Input
@@ -190,7 +188,7 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">
                           Email Address *
                         </label>
                         <Input
@@ -207,7 +205,7 @@ export default function Contact() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-muted-foreground mb-2">
                           Phone Number *
                         </label>
                         <Input
@@ -221,7 +219,7 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="dueDate" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        <label htmlFor="dueDate" className="block text-sm font-medium text-muted-foreground mb-2">
                           Due Date (if applicable)
                         </label>
                         <Input
@@ -236,7 +234,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label htmlFor="service" className="block text-sm font-medium text-muted-foreground mb-2">
                         Service Interest *
                       </label>
                       <select
@@ -245,7 +243,7 @@ export default function Contact() {
                         value={formData.service}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-rose-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                        className="w-full px-3 py-2 border border-border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-background text-foreground"
                       >
                         <option value="">Select a service</option>
                         <option value="birth-doula">Birth Doula Services</option>
@@ -258,7 +256,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-2">
                         Message *
                       </label>
                       <Textarea
@@ -276,7 +274,7 @@ export default function Contact() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-rose-500 hover:bg-rose-600 text-lg py-6"
+                      className="w-full text-lg py-6"
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
@@ -288,16 +286,15 @@ export default function Contact() {
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                <h2 className="text-2xl font-bold text-foreground mb-6">
                   Get in Touch
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                <p className="text-lg text-muted-foreground mb-8">
                   I&apos;m here to answer your questions and discuss how I can support 
                   you and your family during this special time.
                 </p>
@@ -305,48 +302,48 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-rose-500 mt-1" />
+                  <Mail className="h-6 w-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
-                    <p className="text-gray-600 dark:text-gray-300">hello@adison.com</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">I respond within 24 hours</p>
+                    <h3 className="font-semibold text-foreground">Email</h3>
+                    <p className="text-muted-foreground">hello@adison.com</p>
+                    <p className="text-sm text-muted-foreground/70">I respond within 24 hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-rose-500 mt-1" />
+                  <Phone className="h-6 w-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Available for urgent inquiries</p>
+                    <h3 className="font-semibold text-foreground">Phone</h3>
+                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-sm text-muted-foreground/70">Available for urgent inquiries</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-rose-500 mt-1" />
+                  <MapPin className="h-6 w-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Service Area</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Greater Metro Area</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">In-home and hospital support</p>
+                    <h3 className="font-semibold text-foreground">Service Area</h3>
+                    <p className="text-muted-foreground">Greater Metro Area</p>
+                    <p className="text-sm text-muted-foreground/70">In-home and hospital support</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Clock className="h-6 w-6 text-rose-500 mt-1" />
+                  <Clock className="h-6 w-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Availability</h3>
-                    <p className="text-gray-600 dark:text-gray-300">24/7 for births</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Flexible scheduling for consultations</p>
+                    <h3 className="font-semibold text-foreground">Availability</h3>
+                    <p className="text-muted-foreground">24/7 for births</p>
+                    <p className="text-sm text-muted-foreground/70">Flexible scheduling for consultations</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-rose-50 dark:bg-rose-900/20 p-6 rounded-lg">
+              <div className="bg-accent p-6 rounded-lg">
                 <div className="flex items-center space-x-2 mb-3">
-                  <Heart className="h-5 w-5 text-rose-500" />
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Free Consultation</h3>
+                  <Heart className="h-5 w-5 text-primary text-white" />
+                  <h3 className="font-semibold text-foreground text-white">Free Consultation</h3>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                <p className="text-muted-foreground text-sm">
                   I offer a complimentary 30-minute consultation to discuss your needs 
                   and answer any questions you may have about doula services.
                 </p>
@@ -357,7 +354,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -366,10 +363,10 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Here are some common questions about doula services and how I can support you.
             </p>
           </motion.div>
@@ -399,12 +396,12 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
+                className="bg-card p-6 rounded-lg shadow-md"
               >
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-lg font-semibold text-card-foreground mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {faq.answer}
                 </p>
               </motion.div>

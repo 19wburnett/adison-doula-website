@@ -53,22 +53,22 @@ const portfolioImages = [
 
 const services = [
   {
-    icon: <Heart className="h-8 w-8 text-rose-500" />,
+                icon: <Heart className="h-8 w-8 text-primary" />,
     title: "Birth Doula Services",
     description: "Continuous emotional, physical, and informational support during labor and delivery"
   },
   {
-    icon: <Users className="h-8 w-8 text-rose-500" />,
+                icon: <Users className="h-8 w-8 text-primary" />,
     title: "Postpartum Support",
     description: "Ongoing care and assistance during the early weeks with your newborn"
   },
   {
-    icon: <Baby className="h-8 w-8 text-rose-500" />,
+                icon: <Baby className="h-8 w-8 text-primary" />,
     title: "Newborn Care",
     description: "Guidance on feeding, sleep, and caring for your new baby"
   },
   {
-    icon: <Calendar className="h-8 w-8 text-rose-500" />,
+                icon: <Calendar className="h-8 w-8 text-primary" />,
     title: "Prenatal Visits",
     description: "Preparation sessions to help you feel confident and ready"
   }
@@ -80,7 +80,7 @@ export default function Work() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-20 bg-gradient-to-br from-background to-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -88,10 +88,10 @@ export default function Work() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               My Work
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               A glimpse into the compassionate care and support I provide to families 
               during their most precious moments. Every family&apos;s journey is unique, 
               and I&apos;m honored to be part of their story.
@@ -110,10 +110,10 @@ export default function Work() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               How I Support Families
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               My services are designed to provide comprehensive support throughout 
               your pregnancy, birth, and early postpartum journey.
             </p>
@@ -127,15 +127,15 @@ export default function Work() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="text-center p-6 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex justify-center mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-lg font-semibold text-card-foreground mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>
@@ -144,8 +144,8 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Portfolio Gallery */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      {/* Portfolio Gallery - Carousel */}
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -154,16 +154,17 @@ export default function Work() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Moments of Care
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               These images capture the essence of the support I provide to families. 
               Each moment represents trust, care, and the beautiful journey of parenthood.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Photo Wall Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolioImages.map((image, index) => (
               <motion.div
                 key={image.id}
@@ -174,18 +175,29 @@ export default function Work() {
                 className="group cursor-pointer"
                 onClick={() => setSelectedImage(image)}
               >
-                <div className="relative overflow-hidden rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={400}
-                    height={300}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <h3 className="text-lg font-semibold mb-2">{image.title}</h3>
-                      <p className="text-sm">{image.description}</p>
+                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-card">
+                  <div className="aspect-[4/3] relative">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="p-6 bg-card">
+                    <h3 className="text-xl font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                      {image.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {image.description}
+                    </p>
+                  </div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 dark:bg-black/90 rounded-full p-2 backdrop-blur-sm">
+                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -205,12 +217,12 @@ export default function Work() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-              <blockquote className="text-2xl md:text-3xl font-light text-gray-900 dark:text-white mb-8 leading-relaxed">
+              <blockquote className="text-2xl md:text-3xl font-light text-foreground mb-8 leading-relaxed">
                 &ldquo;Adison&apos;s presence during my birth was invaluable. Her calm, confident 
                 support helped me feel empowered and safe throughout the entire process. 
                 I couldn&apos;t have done it without her.&rdquo;
               </blockquote>
-              <cite className="text-lg text-gray-600 dark:text-gray-300 font-medium">
+              <cite className="text-lg text-muted-foreground font-medium">
                 — Jessica L., First-time Mother
               </cite>
           </motion.div>
@@ -238,11 +250,11 @@ export default function Work() {
                   height={600}
                   className="w-full h-auto max-h-[80vh] object-contain"
                 />
-                <div className="p-6 bg-white">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                <div className="p-6 bg-card">
+                  <h3 className="text-2xl font-semibold text-card-foreground mb-2">
                     {selectedImage.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     {selectedImage.description}
                   </p>
                 </div>

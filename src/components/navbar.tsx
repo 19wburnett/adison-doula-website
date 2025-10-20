@@ -2,17 +2,20 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Menu, X, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import DarkModeToggle from './dark-mode-toggle'
+import logo from '../../public/Vela Doula Logo.svg'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Work', href: '/work' },
   { name: 'Reviews', href: '/reviews' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -36,20 +39,20 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm'
+          ? 'bg-background/95 backdrop-blur-md shadow-sm'
           : 'bg-black/20 dark:bg-black/20 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-rose-500" />
-            <span className={`text-xl font-bold transition-colors duration-300 ${
+          <Link href="/" className="flex items-center space-x-3">
+            <Image src={logo} alt="Vela Doula Logo" className="h-14 w-auto" width={48} height={48} />
+            <span className={`text-xl font-light font-yaldevi tracking-[0.25em] transition-colors duration-300  ${
               scrolled 
-                ? 'text-gray-900 dark:text-white' 
+                ? 'text-foreground' 
                 : 'text-white drop-shadow-lg'
-            }`}>Adison</span>
+            }`}>VELA DOULA SERVICES</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,18 +64,18 @@ export default function Navbar() {
                 className={`text-sm font-medium transition-colors duration-200 ${
                   scrolled
                     ? pathname === item.href
-                      ? 'text-rose-600 dark:text-rose-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400'
+                      ? 'text-primary'
+                      : 'text-muted-foreground hover:text-primary'
                     : pathname === item.href
-                      ? 'text-rose-300 drop-shadow-lg'
-                      : 'text-white drop-shadow-lg hover:text-rose-300'
+                      ? 'text-pink-300 drop-shadow-lg'
+                      : 'text-white drop-shadow-lg hover:text-pink-300'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
             <DarkModeToggle />
-            <Button asChild className="bg-rose-500 hover:bg-rose-600">
+            <Button asChild>
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
@@ -86,7 +89,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 transition-colors duration-200 ${
                 scrolled 
-                  ? 'text-gray-700 dark:text-gray-300' 
+                  ? 'text-muted-foreground' 
                   : 'text-white'
               }`}
             >
@@ -105,15 +108,15 @@ export default function Navbar() {
           }}
           className="md:hidden overflow-hidden"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 shadow-lg border border-white/20">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-lg border border-border">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
                   pathname === item.href
-                    ? 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+                    ? 'text-primary bg-accent'
+                    : 'text-muted-foreground hover:text-primary hover:bg-accent'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -121,7 +124,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="px-3 py-2">
-              <Button asChild className="w-full bg-rose-500 hover:bg-rose-600">
+              <Button asChild className="w-full">
                 <Link href="/contact">Get Started</Link>
               </Button>
             </div>
